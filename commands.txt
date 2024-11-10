@@ -1,0 +1,22 @@
+********** Useful Commands ***************
+sudo yum update
+sudo yum install java-1.8.0  --> To install java
+wget https://downloads.apache.org/kafka/3.8.1/kafka_2.12-3.8.1.tgz --> kafka link
+tar -xzf kafka_2.12-3.8.1.tgz --> To unzip kafka file
+sudo mv kafka_2.12-3.8.1 /usr/local/kafka --> to move unziped kafka file in to provided path
+cd /usr/local/kafka
+sudo nano config/server.properties --> To open the config file
+bin/zookeeper-server-start.sh config/zookeeper.properties --> To start zookeeper
+export KAFKA_HEAP_OPTS="-Xmx256M -Xms128M" --> To set memory for kafka
+bin/kafka-server-start.sh config/server.properties --> To start kafka 
+
+## To Create Topic and Partition
+bin/kafka-topics.sh --create --topic kafka-project --bootstrap-server {Put the Public IP of your EC2 Instance:9092} --replication-factor 1 --partitions 1 
+
+### bin/kafka-console-producer.sh --topic kafka_project --bootstrap-server {Put the Public IP of your EC2 Instance:9092}
+
+## To create producer
+bin/kafka-console-producer.sh --topic kafka-project --bootstrap-server {Put the Public IP of your EC2 Instance:9092}
+
+## To run consumer
+bin/kafka-console-consumer.sh --topic kafka-project --bootstrap-server {Put the Public IP of your EC2 Instance:9092}
