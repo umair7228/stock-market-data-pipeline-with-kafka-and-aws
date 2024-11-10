@@ -3,6 +3,8 @@
 ## Project Overview
 This project demonstrates a real-time data pipeline for stock market data. It integrates Apache Kafka for data streaming and multiple AWS services for data storage and querying.
 
+![Architecture-Diagram](https://github.com/user-attachments/assets/fbe4cc9f-7a65-4779-9b6b-f481dc79b948)
+
 ### Key Features:
 - **Real-time data ingestion** using Kafka Producer.
 - **Data storage** in AWS S3 via Kafka Consumer.
